@@ -24,7 +24,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 SECRET_KEY = 'meffmn)uz=49ulbpq32vu3fk0au2b!wn9lc0cyfa&lqc46&r09'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','lobster-app-of9gm.ondigitalocean.app']
 GEOIP_PATH =os.path.join(BASE_DIR, 'geoip/')
