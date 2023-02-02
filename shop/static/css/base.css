@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5 , h6 {
 
 a {
     text-decoration:none;
-    color:#5993bb;
+    color:#fcba03;
 }
 
 a:hover {
@@ -21,7 +21,7 @@ a:hover {
 
 a.button, input[type="submit"] {
     color:#fff;
-    background:#5993bb;
+    background:#fcba03;
     border-radius:4px;
     padding:10px 20px;
     font-size:14px;
@@ -63,7 +63,7 @@ tbody tr.subtotal {
 }
 
 thead th, tbody tr.total {
-    background:#5993bb;
+    background:#fcba03;
     color:#fff;
     font-weight:bold;
 }
@@ -128,6 +128,9 @@ ul.errorlist {
     padding:15px 100px;
     overflow:auto;
 }
+#subheader .cart >a{
+    color:#fcba03;
+}
 
 #header .logo {
     font-family: 'Ubuntu', sans-serif;
@@ -135,11 +138,59 @@ ul.errorlist {
     color:#333;
     font-size:22px;
     margin-right:10%;
+    width:10%;
 }
+#header .logo img{
+    width:100%;
+}
+
+#header .user{
+    width: 20%;
+    float: right;
+    margin: 2%;
+    text-align: right;
+}
+#header .user span{
+    color: black;
+    font-weight: bold;
+    font-size:20px;
+}
+#header .user .userName{
+    color:#fcba03;
+}
+#header .user a {
+    color: black;
+    font-weight: bold;
+    font-size:20px;
+}
+#header .dashboard{
+    width: 20%;
+    margin: 2%;
+    text-align: left;
+    float:left;
+}
+#header .dashboard a {
+    color: black;
+    font-weight: bold;
+    font-size:20px;
+}
+
+
 
 #subheader .cart {
     float:right;
     padding-top:4px;
+    color: black;
+    font-weight: bold;
+    font-size:20px;
+}
+.slider{
+    background: url("/static/img/Blog.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:50vh;
+    width:100%;
 }
 
 #content {
@@ -148,33 +199,43 @@ ul.errorlist {
 }
 
 #sidebar {
-    width:220px;
-    padding:30px 20px 0 0;
-    float:left;
+    width:100%;
 }
-
+#sidebar h3{
+    text-align:center;
+}
 #sidebar ul{
     margin:0;
     padding:0;
+    display:flex;
 }
 
 #sidebar ul li {
     margin:0;
     list-style:none;
     padding:10px 14px;
+    width: 25%;
+    text-align:center;
 }
 
 #sidebar ul li a {
     display:block;
+    color:black;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
 }
 
 #sidebar ul li.selected {
-    background:#5993bb;
+    background:#fcba03;
     border-radius:4px;
 }
 
 #sidebar ul li.selected a {
-    color:#fff;
+    color:black;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
 }
 
 #main {
@@ -182,6 +243,7 @@ ul.errorlist {
     width: 96%;
     margin-right:-220px;
     overflow:hidden;
+    margin-top:5%;
 }
 
 .product-list .item {
@@ -190,15 +252,22 @@ ul.errorlist {
     float:left;
     text-align:center;
     line-height:1.2;
+    font-weight:bold;
+    color:black;
 }
-
+.product-list .item a{
+    color:#fcba03;
+}
 .product-list .item img {
     width:100%;
     margin-bottom:8px;
+    height:450px
 }
 
 .product-detail {
     text-align:justify;
+    height:100%;
+    margin-top:5%;
 }
 
 .product-detail .price {
@@ -211,14 +280,31 @@ ul.errorlist {
     width:40%;
     float:left;
     padding:0 20px 20px 0;
+    height:450px
 }
 
 .product-detail h1 {
     margin-bottom:0;
+    font-weight:bold;
 }
 
 .product-detail h2 {
     margin-top:10px;
+}
+.product-detail h2 a{
+    color:#fcba03;
+    text-decoration:none;
+
+}
+.product-detail form >label{
+    font-weight:bold;
+    margin-right:2%;
+}
+.product-detail form >input[type="submit"]{
+    margin-left:2%;
+    background:#fcba03;
+    color:black;
+    font-weight:bold;
 }
 
 .order-form {
@@ -231,11 +317,11 @@ ul.errorlist {
     background:#efefef;
     padding:10px 20px;
     color:#333;
-    border-bottom:4px solid #5993bb;
+    border-bottom:4px solid #fcba03;
 }
 
 .order-info h3 {
-    color:#5993bb;
+    color:#fcba03;
 }
 
 .order-info ul li {
@@ -327,4 +413,14 @@ form div.field {
     background:#efefef;
     color:#666;
     border-radius:4px;
+}
+
+footer{
+   background: #ececec;
+}
+
+.login{
+    display:block;
+    width: max-content;
+    margin: 10% auto;
 }

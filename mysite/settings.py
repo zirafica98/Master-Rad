@@ -26,12 +26,13 @@ SECRET_KEY = 'meffmn)uz=49ulbpq32vu3fk0au2b!wn9lc0cyfa&lqc46&r09'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','lobster-app-of9gm.ondigitalocean.app']
+ALLOWED_HOSTS = ['127.0.0.1']
 GEOIP_PATH =os.path.join(BASE_DIR, 'geoip/')
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
+    'reportes',
     'django_user_agents',
     'tracking_analyzer',
     'account.apps.AccountConfig',
@@ -79,6 +81,9 @@ CACHES = {
         'LOCATION': '127.0.0.1:8000',
     }
 }
+# SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_ENGINE = 'django.contrib.sessions.backends.file'
+
 USER_AGENTS_CACHE = 'default'
 ROOT_URLCONF = 'mysite.urls'
 
@@ -149,14 +154,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
-STATIC_ROOT = BASE_DIR + "/staticfiles-cdn"
-#https://mysite.fra1.digitaloceanspaces.com
 
-from .cdn.conf import *
+
 
 CART_SESSION_ID = 'cart'
 

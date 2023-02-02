@@ -26,6 +26,7 @@ urlpatterns = [
     path('cart/', include('cart.urls', namespace='cart')),
     path('orders/', include('orders.urls', namespace='orders')),
     path('payment/', include('payment.urls', namespace='payment')),
+    path('reportes/', include('reportes.urls', namespace='reportes')),
     path('', include('shop.urls', namespace='shop')),
     path('django_user_interaction_log/', include('django_user_interaction_log.urls')),
 
